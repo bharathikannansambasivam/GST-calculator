@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GST calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body class="bg-slate-400">
+    <div class="flex items-center justify-center w-screen bg-slate-400">
+      <div
+        class="flex flex-col justify-center items-center bg-slate-300 p-10 rounded-lg mt-10"
+      >
+        <h1 class="text-xl font-bold">GST calculator</h1>
+
+        <label for="Amount" class="w-full">Amount</label>
+        <input
+          id="amount"
+          class="rounded-md p-1"
+          type="number"
+          placeholder="Original Cost"
+        />
+        <br />
+        <label for="GST Rate Percentage" class="w-full"
+          >GST Rate Percentage</label
+        >
+        <input
+          id="gst"
+          class="rounded-md p-1"
+          type="number"
+          placeholder="GST Rate"
+        />
+        <br />
+        <button
+          class="bg-green-600 p-1 text-white rounded-xl"
+          onclick="calculate()"
+        >
+          calculate
+        </button>
+        <div id="result"></div>
+      </div>
+    </div>
+    <div class="h-96 w-96 flex flex-col">
+      <canvas class="" id="myChart"></canvas>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
